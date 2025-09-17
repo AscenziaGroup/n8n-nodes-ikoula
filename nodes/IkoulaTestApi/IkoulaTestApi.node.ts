@@ -9,17 +9,16 @@ import {
 
 import * as crypto from 'crypto';
 
-export class IkoulaZimbraApi implements INodeType {
+export class IkoulaTestApi implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Ikoula Zimbra API',
-		name: 'ikoulaZimbraApi',
-		icon: 'file:logo_IKOULA_light_fr.svg',
+		displayName: 'Ikoula Test API',
+		name: 'ikoulaTestApi',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Interact with Ikoula Zimbra API for Zimbra email services management',
+		description: 'Test version of Ikoula API with embedded RSA key',
 		defaults: {
-			name: 'Ikoula Zimbra API',
+			name: 'Ikoula Test API',
 		},
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],
@@ -31,75 +30,26 @@ export class IkoulaZimbraApi implements INodeType {
 		],
 		properties: [
 			{
-				displayName: 'Resource',
-				name: 'resource',
-				type: 'options',
-				noDataExpression: true,
-				options: [
-					{
-						name: 'Zimbra',
-						value: 'zimbra',
-						description: 'Manage Zimbra email service',
-					},
-				],
-				default: 'zimbra',
-			},
-			{
 				displayName: 'Operation',
 				name: 'operation',
 				type: 'options',
 				noDataExpression: true,
-				displayOptions: {
-					show: {
-						resource: ['zimbra'],
-					},
-				},
 				options: [
 					{
-						name: 'Get Account Details',
-						value: 'getAccountDetails',
-						description: 'Get details of a specific Zimbra account',
-						action: 'Get account details',
-					},
-					{
-						name: 'List Accounts',
-						value: 'listAccounts',
-						description: 'List all Zimbra accounts',
-						action: 'List all accounts',
+						name: 'Test Connection',
+						value: 'testConnection',
+						description: 'Test the API connection with encrypted password',
+						action: 'Test the API connection',
 					},
 				],
-				default: 'listAccounts',
+				default: 'testConnection',
 			},
 			{
 				displayName: 'Subscription ID',
 				name: 'subscrId',
 				type: 'number',
 				required: true,
-				displayOptions: {
-					show: {
-						resource: ['zimbra'],
-						operation: ['getAccountDetails'],
-					},
-				},
 				default: 0,
-				description: 'The ID of the Zimbra service subscription',
-			},
-			{
-				displayName: 'Response Format',
-				name: 'format',
-				type: 'options',
-				options: [
-					{
-						name: 'JSON',
-						value: 'json',
-					},
-					{
-						name: 'XML',
-						value: 'xml',
-					},
-				],
-				default: 'json',
-				description: 'The format of the API response',
 			},
 		],
 	};
@@ -116,8 +66,6 @@ export class IkoulaZimbraApi implements INodeType {
 		const email = credentials.email as string;
 		const password = credentials.password as string;
 		const apiUrl = (credentials.apiUrl as string) || 'https://api.ikoula.com';
-
-		// Using static imports for Node.js modules
 
 		// Embedded RSA public key (instead of reading from file)
 		const publicKey = `-----BEGIN PUBLIC KEY-----
@@ -148,26 +96,19 @@ XwIDAQAB
 		for (let i = 0; i < items.length; i++) {
 			try {
 				const operation = this.getNodeParameter('operation', i) as string;
-				const format = this.getNodeParameter('format', i) as string;
+				const subscrId = this.getNodeParameter('subscrId', i) as number;
 
 				let endpoint = '';
-				let method = 'GET';
 				const params: any = {
 					login: email,
 					crypted_password: cryptedPassword,
-					format: format,
+					format: 'json',
 				};
 
-				// Determine the endpoint based on operation
+				// Simple test endpoint
 				switch (operation) {
-					case 'listAccounts':
-						endpoint = '/zimbra';
-						method = 'GET';
-						break;
-					case 'getAccountDetails':
-						const subscrId = this.getNodeParameter('subscrId', i) as number;
-						endpoint = `/zimbra/${subscrId}`;
-						method = 'GET';
+					case 'testConnection':
+						endpoint = `/cs/${subscrId}`;
 						break;
 				}
 
@@ -179,13 +120,13 @@ XwIDAQAB
 
 				// Prepare request options
 				const requestOptions: any = {
-					method: method,
+					method: 'GET',
 					url: url.toString(),
 					headers: {
-						'Accept': format === 'json' ? 'application/json' : 'application/xml',
+						'Accept': 'application/json',
 						'Content-Type': 'application/json',
 					},
-					json: format === 'json',
+					json: true,
 				};
 
 				// Make the API request

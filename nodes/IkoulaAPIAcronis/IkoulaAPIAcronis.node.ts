@@ -7,8 +7,6 @@ import {
 	NodeOperationError,
 } from 'n8n-workflow';
 
-import * as fs from 'fs';
-import * as path from 'path';
 import * as crypto from 'crypto';
 
 export class IkoulaApiAcronis implements INodeType {
@@ -121,18 +119,16 @@ export class IkoulaApiAcronis implements INodeType {
 
 		// Using static imports for Node.js modules
 
-		// Get public key for encryption
-		const publicKeyPath = path.join(__dirname, '../../../Ikoula.API.RSAKeyPub.pem');
-		let publicKey: string;
-
-		try {
-			publicKey = fs.readFileSync(publicKeyPath, 'utf8');
-		} catch (error: any) {
-			throw new NodeOperationError(
-				this.getNode(),
-				`Failed to read public key file: ${error.message}`,
-			);
-		}
+		// Embedded RSA public key (instead of reading from file)
+		const publicKey = `-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr6aXKbRJ+LdqhfNV4rxm
+qEFtIuFzk2Xve4Hr/Z3mIDda5A2mJkv5B3rF1bKzP5FzXmLFf14jYgwAk50qY9K1
+IEa+aSOjLhs4hEijg6yIru8wHu4UQbR9kkP/zSfkD9o58a26m8IgOr9WODtRhmSV
+Y7zMZpsec2Z9hRk5cJYzpiC9d2UkU0no3fouCeLrg2VmhXcWM/KR/t1StTJFiJLI
+g3lE+qjvdipuMN8BbA5dqPlugERiW9tvD3hMfeB9wl30kdMza+d3E8uXxuIDGIZd
+npCxjWrFGSlFCIgnSfYXBtCKyDcsBcKGH1V7ks4AkzWhxesMyivVDuRZa6jf5E5U
+XwIDAQAB
+-----END PUBLIC KEY-----`;
 
 		// Encrypt password with RSA public key
 		const encryptPassword = (password: string, publicKey: string): string => {

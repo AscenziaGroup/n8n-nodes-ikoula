@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-ikoula",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "n8n node for Ikoula API integration",
   "keywords": [
     "n8n-community-node-package"
@@ -29,8 +29,7 @@
   },
   "files": [
     "dist",
-    "index.js",
-    "Ikoula.API.RSAKeyPub.pem"
+    "index.js"
   ],
   "n8n": {
     "n8nNodesApiVersion": 1,
@@ -38,22 +37,23 @@
       "dist/credentials/IkoulaApi.credentials.js"
     ],
     "nodes": [
+      "dist/nodes/IkoulaTestApi/IkoulaTestApi.node.js",
       "dist/nodes/IkoulaApics/IkoulaApics.node.js",
-      "dist/nodes/IkoulaApiikic/IkoulaApiikic.node.js",
       "dist/nodes/IkoulaVpsapi/IkoulaVpsapi.node.js",
       "dist/nodes/IkoulaApiDedicatedServer/IkoulaApiDedicatedServer.node.js",
+      "dist/nodes/IkoulaApiAcronis/IkoulaApiAcronis.node.js",
+      "dist/nodes/IkoulaApiEset/IkoulaApiEset.node.js",
+      "dist/nodes/IkoulaApiMicrosoft/IkoulaApiMicrosoft.node.js",
       "dist/nodes/IkoulaApiPlatform/IkoulaApiPlatform.node.js",
       "dist/nodes/IkoulaApiVeeam/IkoulaApiVeeam.node.js",
-      "dist/nodes/IkoulaApiAcronis/IkoulaApiAcronis.node.js",
-      "dist/nodes/IkoulaApiMicrosoft/IkoulaApiMicrosoft.node.js",
-      "dist/nodes/IkoulaApiEset/IkoulaApiEset.node.js",
-      "dist/nodes/IkoulaVmwareApi/IkoulaVmwareApi.node.js",
+      "dist/nodes/IkoulaApiikic/IkoulaApiikic.node.js",
       "dist/nodes/IkoulaBusinessApi/IkoulaBusinessApi.node.js",
-      "dist/nodes/IkoulaZimbraApi/IkoulaZimbraApi.node.js",
       "dist/nodes/IkoulaHebApi/IkoulaHebApi.node.js",
-      "dist/nodes/IkoulaPleskManagedApi/IkoulaPleskManagedApi.node.js",
       "dist/nodes/IkoulaNddApi/IkoulaNddApi.node.js",
-      "dist/nodes/IkoulaSslApi/IkoulaSslApi.node.js"
+      "dist/nodes/IkoulaPleskManagedApi/IkoulaPleskManagedApi.node.js",
+      "dist/nodes/IkoulaSslApi/IkoulaSslApi.node.js",
+      "dist/nodes/IkoulaVmwareApi/IkoulaVmwareApi.node.js",
+      "dist/nodes/IkoulaZimbraApi/IkoulaZimbraApi.node.js"
     ]
   },
   "devDependencies": {
@@ -66,7 +66,6 @@
     "typescript": "^5.8.2"
   },
   "peerDependencies": {
-    "n8n-workflow": "*",
-    "n8n-core": "*"
+    "n8n-workflow": "*"
   }
 }
