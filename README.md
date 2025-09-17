@@ -2,6 +2,8 @@
 
 **Developed by Ascenzia**
 
+> ⚠️ **BETA STATUS**: All nodes in this package are currently in beta. While functional, they may have limitations and are subject to changes. Use with caution in production environments.
+
 A comprehensive collection of n8n nodes for integrating with the Ikoula API ecosystem. This package provides seamless access to all Ikoula services including cloud computing, dedicated servers, web hosting, domain management, SSL certificates, and business solutions.
 
 ## Installation
@@ -20,50 +22,54 @@ All nodes in this package require Ikoula API credentials. You'll need to configu
 - **Password**: Your Ikoula account password
 - **API URL**: The Ikoula API endpoint (default: https://api.ikoula.com)
 
-The nodes use RSA encryption for secure password transmission and require the `Ikoula.API.RSAKeyPub.pem` public key file in your project root directory.
+The nodes use embedded RSA encryption for secure password transmission. Your password is automatically encrypted when making API calls to Ikoula services.
 
 ## Available Nodes
 
 ### Core Infrastructure Nodes
 
-#### Ikoula API CS (Cloud Server)
+#### Ikoula API CS (Cloud Server) - **BETA**
 **Developed by Ascenzia**
 
-Manage Ikoula Cloud Server instances with operations for server lifecycle management.
+Manage Ikoula CloudStack API for billing and consumption operations:
+- **List Bills**: Lists bills associated to the account
+- **Get Billing Grid**: Retrieves billing grid
+- **Get Current Consumption**: Retrieves current consumption
+- **Get Billing Consumption**: Gets the consumption for a specific billing
 
-#### Ikoula API IKIC (Infrastructure)
+#### Ikoula API IKIC (Infrastructure) - **BETA**
 **Developed by Ascenzia**
 
 Access Ikoula's infrastructure management capabilities for advanced cloud operations.
 
-#### Ikoula VPS API
+#### Ikoula VPS API - **BETA**
 **Developed by Ascenzia**
 
 Comprehensive VPS (Virtual Private Server) management including creation, configuration, and monitoring.
 
-#### Ikoula API Dedicated Server
+#### Ikoula API Dedicated Server - **BETA**
 **Developed by Ascenzia**
 
 Full control over dedicated server resources with provisioning and management operations.
 
-#### Ikoula API Platform
+#### Ikoula API Platform - **BETA**
 **Developed by Ascenzia**
 
 Platform-as-a-Service operations for application deployment and management.
 
 ### Backup & Security Nodes
 
-#### Ikoula API Veeam
+#### Ikoula API Veeam - **BETA**
 **Developed by Ascenzia**
 
 Integrate with Veeam backup solutions for enterprise data protection and recovery.
 
-#### Ikoula API Acronis
+#### Ikoula API Acronis - **BETA**
 **Developed by Ascenzia**
 
 Access Acronis backup and cyber protection services through the Ikoula platform.
 
-#### Ikoula API ESET
+#### Ikoula API ESET - **BETA**
 **Developed by Ascenzia**
 
 Manage ESET antivirus and security solutions with operations:
@@ -72,7 +78,7 @@ Manage ESET antivirus and security solutions with operations:
 
 ### Microsoft Solutions
 
-#### Ikoula API Microsoft
+#### Ikoula API Microsoft - **BETA**
 **Developed by Ascenzia**
 
 Comprehensive Microsoft services integration with four main resources:
@@ -104,14 +110,14 @@ Comprehensive Microsoft services integration with four main resources:
 
 ### Virtualization & Enterprise
 
-#### Ikoula VMware API
+#### Ikoula VMware API - **BETA**
 **Developed by Ascenzia**
 
 VMware virtualization platform management with operations:
 - **List Accounts**: Get all VMware service accounts
 - **Get Account Details**: Retrieve detailed VMware account information
 
-#### Ikoula Business API
+#### Ikoula Business API - **BETA**
 **Developed by Ascenzia**
 
 Comprehensive business process management with operations:
@@ -125,21 +131,21 @@ Comprehensive business process management with operations:
 - **List Terminable Services**: Get services eligible for termination
 - **Terminate Service**: Cancel existing services
 
-#### Ikoula Zimbra API
+#### Ikoula Zimbra API - **BETA**
 **Developed by Ascenzia**
 
 Zimbra email and collaboration platform management:
 - **List Accounts**: Get all Zimbra service accounts
 - **Get Account Details**: Retrieve detailed Zimbra account information
 
-#### Ikoula HEB API
+#### Ikoula HEB API - **BETA**
 **Developed by Ascenzia**
 
 HEB (Hébergement) web hosting services management:
 - **List Accounts**: Get all HEB service accounts
 - **Get Account Details**: Retrieve detailed HEB account information
 
-#### Ikoula Plesk Managed API
+#### Ikoula Plesk Managed API - **BETA**
 **Developed by Ascenzia**
 
 Plesk managed hosting platform operations:
@@ -148,7 +154,7 @@ Plesk managed hosting platform operations:
 
 ### Domain & Certificate Management
 
-#### Ikoula NDD API
+#### Ikoula NDD API - **BETA**
 **Developed by Ascenzia**
 
 Domain name and DNS management services:
@@ -157,12 +163,26 @@ Domain name and DNS management services:
 - **Add DNS Registration**: Add DNS registration for Certbot SSL automation
 - **Delete DNS Registration**: Remove DNS registration for Certbot
 
-#### Ikoula SSL API
+#### Ikoula SSL API - **BETA**
 **Developed by Ascenzia**
 
 SSL certificate services management:
 - **List Subscriptions**: Get all SSL certificate subscriptions
 - **Get Subscription Details**: Retrieve detailed SSL subscription information
+
+## Beta Status & Limitations
+
+⚠️ **Important Beta Information:**
+
+- **All nodes are in beta status** and may have limitations or bugs
+- **API coverage may be incomplete** - not all Ikoula API endpoints are implemented
+- **Breaking changes possible** in future versions during beta period
+- **Limited testing** - nodes have been tested with basic use cases but may fail with edge cases
+- **Documentation gaps** - some features may not be fully documented
+- **Production use caution** - while nodes are functional, use with care in production environments
+
+**Beta Testing Feedback:**
+If you encounter issues or have suggestions, please report them through the appropriate channels. Your feedback helps improve the package for stable release.
 
 ## Features
 

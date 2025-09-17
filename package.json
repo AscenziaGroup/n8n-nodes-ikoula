@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-ikoula",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "n8n node for Ikoula API integration",
   "keywords": [
     "n8n-community-node-package"
