@@ -8,12 +8,12 @@
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Ascenzia",
+    "email": "contact@ascenzia.fr"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/n8n-nodes-ikoula.git"
+    "url": "https://github.com/AscenziaGroup/n8n-nodes-ikoula.git"
   },
   "engines": {
     "node": ">=20.15"
@@ -36,22 +36,22 @@
       "dist/credentials/IkoulaApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/IkoulaAPICS/IkoulaAPICS.node.js",
-      "dist/nodes/IkoulaAPIIKIC/IkoulaAPIIKIC.node.js",
-      "dist/nodes/IkoulaVPSAPI/IkoulaVPSAPI.node.js",
-      "dist/nodes/IkoulaAPIDedicatedServer/IkoulaAPIDedicatedServer.node.js",
-      "dist/nodes/IkoulaAPIPlatform/IkoulaAPIPlatform.node.js",
-      "dist/nodes/IkoulaAPIVeeam/IkoulaAPIVeeam.node.js",
-      "dist/nodes/IkoulaAPIAcronis/IkoulaAPIAcronis.node.js",
-      "dist/nodes/IkoulaAPIMicrosoft/IkoulaAPIMicrosoft.node.js",
-      "dist/nodes/IkoulaAPIESET/IkoulaAPIESET.node.js",
-      "dist/nodes/IkoulaVMwareAPI/IkoulaVMwareAPI.node.js",
-      "dist/nodes/IkoulaBusinessAPI/IkoulaBusinessAPI.node.js",
-      "dist/nodes/IkoulaZimbraAPI/IkoulaZimbraAPI.node.js",
-      "dist/nodes/IkoulaHEBAPI/IkoulaHEBAPI.node.js",
-      "dist/nodes/IkoulaPleskManagedAPI/IkoulaPleskManagedAPI.node.js",
-      "dist/nodes/IkoulaNDDAPI/IkoulaNDDAPI.node.js",
-      "dist/nodes/IkoulaSSLAPI/IkoulaSSLAPI.node.js"
+      "dist/nodes/IkoulaApics/IkoulaApics.node.js",
+      "dist/nodes/IkoulaApiikic/IkoulaApiikic.node.js",
+      "dist/nodes/IkoulaVpsapi/IkoulaVpsapi.node.js",
+      "dist/nodes/IkoulaApiDedicatedServer/IkoulaApiDedicatedServer.node.js",
+      "dist/nodes/IkoulaApiPlatform/IkoulaApiPlatform.node.js",
+      "dist/nodes/IkoulaApiVeeam/IkoulaApiVeeam.node.js",
+      "dist/nodes/IkoulaApiAcronis/IkoulaApiAcronis.node.js",
+      "dist/nodes/IkoulaApiMicrosoft/IkoulaApiMicrosoft.node.js",
+      "dist/nodes/IkoulaApiEset/IkoulaApiEset.node.js",
+      "dist/nodes/IkoulaVmwareApi/IkoulaVmwareApi.node.js",
+      "dist/nodes/IkoulaBusinessApi/IkoulaBusinessApi.node.js",
+      "dist/nodes/IkoulaZimbraApi/IkoulaZimbraApi.node.js",
+      "dist/nodes/IkoulaHebApi/IkoulaHebApi.node.js",
+      "dist/nodes/IkoulaPleskManagedApi/IkoulaPleskManagedApi.node.js",
+      "dist/nodes/IkoulaNddApi/IkoulaNddApi.node.js",
+      "dist/nodes/IkoulaSslApi/IkoulaSslApi.node.js"
     ]
   },
   "devDependencies": {

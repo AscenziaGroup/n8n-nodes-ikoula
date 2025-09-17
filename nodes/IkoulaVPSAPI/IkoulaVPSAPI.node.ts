@@ -35,19 +35,14 @@ export class IkoulaVPSAPI implements INodeType {
 				noDataExpression: true,
 				options: [
 					{
-						name: 'VPS Summary',
-						value: 'vpsSummary',
-						description: 'Main VPS operations and information',
-					},
-					{
-						name: 'VPS Snapshot',
-						value: 'vpsSnapshot',
-						description: 'Manage VPS snapshots',
-					},
-					{
 						name: 'VPS DNS Secondary',
 						value: 'vpsDnsSecondary',
 						description: 'Manage secondary DNS',
+					},
+					{
+						name: 'VPS Reset',
+						value: 'vpsReset',
+						description: 'Reset virtual machine with new OS',
 					},
 					{
 						name: 'VPS Reverse DN',
@@ -60,9 +55,14 @@ export class IkoulaVPSAPI implements INodeType {
 						description: 'Manage security scans',
 					},
 					{
-						name: 'VPS Reset',
-						value: 'vpsReset',
-						description: 'Reset virtual machine with new OS',
+						name: 'VPS Snapshot',
+						value: 'vpsSnapshot',
+						description: 'Manage VPS snapshots',
+					},
+					{
+						name: 'VPS Summary',
+						value: 'vpsSummary',
+						description: 'Main VPS operations and information',
 					},
 				],
 				default: 'vpsSummary',
@@ -79,12 +79,6 @@ export class IkoulaVPSAPI implements INodeType {
 				},
 				options: [
 					{
-						name: 'List Services',
-						value: 'listServices',
-						description: 'Lists all VPS client services',
-						action: 'List services a vps summary',
-					},
-					{
 						name: 'Get Service Details',
 						value: 'getServiceDetails',
 						description: 'Get detailed information about a specific VPS service',
@@ -97,22 +91,10 @@ export class IkoulaVPSAPI implements INodeType {
 						action: 'Get status a vps summary',
 					},
 					{
-						name: 'Start',
-						value: 'start',
-						description: 'Start the virtual machine',
-						action: 'Start a vps summary',
-					},
-					{
-						name: 'Stop (Hardware)',
-						value: 'stop',
-						description: 'Stop the virtual machine (Hardware)',
-						action: 'Stop hardware a vps summary',
-					},
-					{
-						name: 'Shutdown (Software)',
-						value: 'shutdown',
-						description: 'Stop the virtual machine (Software)',
-						action: 'Shutdown software a vps summary',
+						name: 'List Services',
+						value: 'listServices',
+						description: 'Lists all VPS client services',
+						action: 'List services a vps summary',
 					},
 					{
 						name: 'Pause',
@@ -125,6 +107,24 @@ export class IkoulaVPSAPI implements INodeType {
 						value: 'resume',
 						description: 'Resume the virtual machine',
 						action: 'Resume a vps summary',
+					},
+					{
+						name: 'Shutdown (Software)',
+						value: 'shutdown',
+						description: 'Stop the virtual machine (Software)',
+						action: 'Shutdown software a vps summary',
+					},
+					{
+						name: 'Start',
+						value: 'start',
+						description: 'Start the virtual machine',
+						action: 'Start a vps summary',
+					},
+					{
+						name: 'Stop (Hardware)',
+						value: 'stop',
+						description: 'Stop the virtual machine (Hardware)',
+						action: 'Stop hardware a vps summary',
 					},
 					{
 						name: 'Suspend',
