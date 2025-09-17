@@ -7,7 +7,7 @@ import {
 	NodeOperationError,
 } from 'n8n-workflow';
 
-export class IkoulaAPIAcronis implements INodeType {
+export class IkoulaApiAcronis implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Ikoula API Acronis',
 		name: 'ikoulaApiAcronis',

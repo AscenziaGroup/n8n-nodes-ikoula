@@ -7,7 +7,7 @@ import {
 	NodeOperationError,
 } from 'n8n-workflow';
 
-export class IkoulaSSLAPI implements INodeType {
+export class IkoulaSslApi implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Ikoula SSL API',
 		name: 'ikoulaSslApi',

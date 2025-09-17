@@ -7,7 +7,7 @@ import {
 	NodeOperationError,
 } from 'n8n-workflow';
 
-export class IkoulaVMwareAPI implements INodeType {
+export class IkoulaVmwareApi implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Ikoula VMware API',
 		name: 'ikoulaVmwareApi',

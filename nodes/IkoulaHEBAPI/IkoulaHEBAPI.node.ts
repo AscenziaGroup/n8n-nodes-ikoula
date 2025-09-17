@@ -7,7 +7,7 @@ import {
 	NodeOperationError,
 } from 'n8n-workflow';
 
-export class IkoulaHEBAPI implements INodeType {
+export class IkoulaHebApi implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Ikoula HEB API',
 		name: 'ikoulaHebApi',

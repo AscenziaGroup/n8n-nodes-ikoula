@@ -7,7 +7,7 @@ import {
 	NodeOperationError,
 } from 'n8n-workflow';
 
-export class IkoulaZimbraAPI implements INodeType {
+export class IkoulaZimbraApi implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Ikoula Zimbra API',
 		name: 'ikoulaZimbraApi',

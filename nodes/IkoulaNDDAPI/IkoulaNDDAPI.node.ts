@@ -7,7 +7,7 @@ import {
 	NodeOperationError,
 } from 'n8n-workflow';
 
-export class IkoulaNDDAPI implements INodeType {
+export class IkoulaNddApi implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Ikoula NDD API',
 		name: 'ikoulaNddApi',

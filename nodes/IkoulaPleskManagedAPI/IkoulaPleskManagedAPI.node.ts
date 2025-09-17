@@ -7,7 +7,7 @@ import {
 	NodeOperationError,
 } from 'n8n-workflow';
 
-export class IkoulaPleskManagedAPI implements INodeType {
+export class IkoulaPleskManagedApi implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Ikoula Plesk Managed API',
 		name: 'ikoulaPleskManagedApi',
