@@ -7,6 +7,10 @@ import {
 	NodeOperationError,
 } from 'n8n-workflow';
 
+import * as fs from 'fs';
+import * as path from 'path';
+import * as crypto from 'crypto';
+
 export class IkoulaBusinessApi implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Ikoula Business API',
@@ -384,10 +388,7 @@ export class IkoulaBusinessApi implements INodeType {
 		const password = credentials.password as string;
 		const apiUrl = (credentials.apiUrl as string) || 'https://api.ikoula.com';
 
-		// Dynamic imports for Node.js modules
-		const fs = await import('fs');
-		const path = await import('path');
-		const crypto = await import('crypto');
+		// Using static imports for Node.js modules
 
 		// Get public key for encryption
 		const publicKeyPath = path.join(__dirname, '../../../Ikoula.API.RSAKeyPub.pem');

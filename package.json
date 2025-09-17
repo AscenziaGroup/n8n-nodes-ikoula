@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-ikoula",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "n8n node for Ikoula API integration",
   "keywords": [
     "n8n-community-node-package"
@@ -65,10 +65,8 @@
     "prettier": "^3.5.3",
     "typescript": "^5.8.2"
   },
-  "dependencies": {
-    "n8n-workflow": "^1.0.0"
-  },
   "peerDependencies": {
-    "n8n-workflow": "*"
+    "n8n-workflow": "*",
+    "n8n-core": "*"
   }
 }
