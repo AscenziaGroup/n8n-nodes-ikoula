@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-ikoula",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "n8n node for Ikoula API integration",
   "keywords": [
     "n8n-community-node-package"
@@ -33,25 +33,25 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/IkoulaApi.credentials.js"
+      "credentials/IkoulaApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/IkoulaApics/IkoulaApics.node.js",
-      "dist/nodes/IkoulaApiikic/IkoulaApiikic.node.js",
-      "dist/nodes/IkoulaVpsapi/IkoulaVpsapi.node.js",
-      "dist/nodes/IkoulaApiDedicatedServer/IkoulaApiDedicatedServer.node.js",
-      "dist/nodes/IkoulaApiPlatform/IkoulaApiPlatform.node.js",
-      "dist/nodes/IkoulaApiVeeam/IkoulaApiVeeam.node.js",
-      "dist/nodes/IkoulaApiAcronis/IkoulaApiAcronis.node.js",
-      "dist/nodes/IkoulaApiMicrosoft/IkoulaApiMicrosoft.node.js",
-      "dist/nodes/IkoulaApiEset/IkoulaApiEset.node.js",
-      "dist/nodes/IkoulaVmwareApi/IkoulaVmwareApi.node.js",
-      "dist/nodes/IkoulaBusinessApi/IkoulaBusinessApi.node.js",
-      "dist/nodes/IkoulaZimbraApi/IkoulaZimbraApi.node.js",
-      "dist/nodes/IkoulaHebApi/IkoulaHebApi.node.js",
-      "dist/nodes/IkoulaPleskManagedApi/IkoulaPleskManagedApi.node.js",
-      "dist/nodes/IkoulaNddApi/IkoulaNddApi.node.js",
-      "dist/nodes/IkoulaSslApi/IkoulaSslApi.node.js"
+      "nodes/IkoulaApics/IkoulaApics.node.js",
+      "nodes/IkoulaApiikic/IkoulaApiikic.node.js",
+      "nodes/IkoulaVpsapi/IkoulaVpsapi.node.js",
+      "nodes/IkoulaApiDedicatedServer/IkoulaApiDedicatedServer.node.js",
+      "nodes/IkoulaApiPlatform/IkoulaApiPlatform.node.js",
+      "nodes/IkoulaApiVeeam/IkoulaApiVeeam.node.js",
+      "nodes/IkoulaApiAcronis/IkoulaApiAcronis.node.js",
+      "nodes/IkoulaApiMicrosoft/IkoulaApiMicrosoft.node.js",
+      "nodes/IkoulaApiEset/IkoulaApiEset.node.js",
+      "nodes/IkoulaVmwareApi/IkoulaVmwareApi.node.js",
+      "nodes/IkoulaBusinessApi/IkoulaBusinessApi.node.js",
+      "nodes/IkoulaZimbraApi/IkoulaZimbraApi.node.js",
+      "nodes/IkoulaHebApi/IkoulaHebApi.node.js",
+      "nodes/IkoulaPleskManagedApi/IkoulaPleskManagedApi.node.js",
+      "nodes/IkoulaNddApi/IkoulaNddApi.node.js",
+      "nodes/IkoulaSslApi/IkoulaSslApi.node.js"
     ]
   },
   "devDependencies": {
