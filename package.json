@@ -1,7 +1,7 @@
 {
-  "name": "n8n-nodes-<...>",
+  "name": "n8n-nodes-ikoula",
   "version": "0.1.0",
-  "description": "",
+  "description": "n8n node for Ikoula API integration",
   "keywords": [
     "n8n-community-node-package"
   ],
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/yourusername/n8n-nodes-ikoula.git"
   },
   "engines": {
     "node": ">=20.15"
@@ -33,15 +33,29 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
+      "dist/credentials/IkoulaApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/IkoulaAPICS/IkoulaAPICS.node.js",
+      "dist/nodes/IkoulaAPIIKIC/IkoulaAPIIKIC.node.js",
+      "dist/nodes/IkoulaVPSAPI/IkoulaVPSAPI.node.js",
+      "dist/nodes/IkoulaAPIDedicatedServer/IkoulaAPIDedicatedServer.node.js",
+      "dist/nodes/IkoulaAPIPlatform/IkoulaAPIPlatform.node.js",
+      "dist/nodes/IkoulaAPIVeeam/IkoulaAPIVeeam.node.js",
+      "dist/nodes/IkoulaAPIAcronis/IkoulaAPIAcronis.node.js",
+      "dist/nodes/IkoulaAPIMicrosoft/IkoulaAPIMicrosoft.node.js",
+      "dist/nodes/IkoulaAPIESET/IkoulaAPIESET.node.js",
+      "dist/nodes/IkoulaVMwareAPI/IkoulaVMwareAPI.node.js",
+      "dist/nodes/IkoulaBusinessAPI/IkoulaBusinessAPI.node.js",
+      "dist/nodes/IkoulaZimbraAPI/IkoulaZimbraAPI.node.js",
+      "dist/nodes/IkoulaHEBAPI/IkoulaHEBAPI.node.js",
+      "dist/nodes/IkoulaPleskManagedAPI/IkoulaPleskManagedAPI.node.js",
+      "dist/nodes/IkoulaNDDAPI/IkoulaNDDAPI.node.js",
+      "dist/nodes/IkoulaSSLAPI/IkoulaSSLAPI.node.js"
     ]
   },
   "devDependencies": {
+    "@types/node": "^24.5.0",
     "@typescript-eslint/parser": "~8.32.0",
     "eslint": "^8.57.0",
     "eslint-plugin-n8n-nodes-base": "^1.16.3",

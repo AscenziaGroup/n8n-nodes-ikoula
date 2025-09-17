@@ -1,48 +1,278 @@
-![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)
+# n8n-nodes-ikoula
 
-# n8n-nodes-starter
+**Developed by Ascenzia**
 
-This repo contains example nodes to help you get started building your own custom integrations for [n8n](https://n8n.io). It includes the node linter and other dependencies.
+A comprehensive collection of n8n nodes for integrating with the Ikoula API ecosystem. This package provides seamless access to all Ikoula services including cloud computing, dedicated servers, web hosting, domain management, SSL certificates, and business solutions.
 
-To make your custom node available to the community, you must create it as an npm package, and [submit it to the npm registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
+## Installation
 
-If you would like your node to be available on n8n cloud you can also [submit your node for verification](https://docs.n8n.io/integrations/creating-nodes/deploy/submit-community-nodes/).
+To install this community node package in your n8n instance:
 
-## Prerequisites
+```bash
+npm install n8n-nodes-ikoula
+```
 
-You need the following installed on your development machine:
+## Authentication
 
-* [git](https://git-scm.com/downloads)
-* Node.js and npm. Minimum version Node 20. You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
-* Install n8n with:
-  ```
-  npm install n8n -g
-  ```
-* Recommended: follow n8n's guide to [set up your development environment](https://docs.n8n.io/integrations/creating-nodes/build/node-development-environment/).
+All nodes in this package require Ikoula API credentials. You'll need to configure the `ikoulaApi` credential with:
 
-## Using this starter
+- **Email**: Your Ikoula account email
+- **Password**: Your Ikoula account password
+- **API URL**: The Ikoula API endpoint (default: https://api.ikoula.com)
 
-These are the basic steps for working with the starter. For detailed guidance on creating and publishing nodes, refer to the [documentation](https://docs.n8n.io/integrations/creating-nodes/).
+The nodes use RSA encryption for secure password transmission and require the `Ikoula.API.RSAKeyPub.pem` public key file in your project root directory.
 
-1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from this template repository.
-2. Clone your new repo:
-   ```
-   git clone https://github.com/<your organization>/<your-repo-name>.git
-   ```
-3. Run `npm i` to install dependencies.
-4. Open the project in your editor.
-5. Browse the examples in `/nodes` and `/credentials`. Modify the examples, or replace them with your own nodes.
-6. Update the `package.json` to match your details.
-7. Run `npm run lint` to check for errors or `npm run lintfix` to automatically fix errors when possible.
-8. Test your node locally. Refer to [Run your node locally](https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/) for guidance.
-9. Replace this README with documentation for your node. Use the [README_TEMPLATE](README_TEMPLATE.md) to get started.
-10. Update the LICENSE file to use your details.
-11. [Publish](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) your package to npm.
+## Available Nodes
 
-## More information
+### Core Infrastructure Nodes
 
-Refer to our [documentation on creating nodes](https://docs.n8n.io/integrations/creating-nodes/) for detailed information on building your own nodes.
+#### Ikoula API CS (Cloud Server)
+**Developed by Ascenzia**
+
+Manage Ikoula Cloud Server instances with operations for server lifecycle management.
+
+#### Ikoula API IKIC (Infrastructure)
+**Developed by Ascenzia**
+
+Access Ikoula's infrastructure management capabilities for advanced cloud operations.
+
+#### Ikoula VPS API
+**Developed by Ascenzia**
+
+Comprehensive VPS (Virtual Private Server) management including creation, configuration, and monitoring.
+
+#### Ikoula API Dedicated Server
+**Developed by Ascenzia**
+
+Full control over dedicated server resources with provisioning and management operations.
+
+#### Ikoula API Platform
+**Developed by Ascenzia**
+
+Platform-as-a-Service operations for application deployment and management.
+
+### Backup & Security Nodes
+
+#### Ikoula API Veeam
+**Developed by Ascenzia**
+
+Integrate with Veeam backup solutions for enterprise data protection and recovery.
+
+#### Ikoula API Acronis
+**Developed by Ascenzia**
+
+Access Acronis backup and cyber protection services through the Ikoula platform.
+
+#### Ikoula API ESET
+**Developed by Ascenzia**
+
+Manage ESET antivirus and security solutions with operations:
+- **List Accounts**: Get all ESET service accounts
+- **Get Account Details**: Retrieve detailed information for a specific ESET account
+
+### Microsoft Solutions
+
+#### Ikoula API Microsoft
+**Developed by Ascenzia**
+
+Comprehensive Microsoft services integration with four main resources:
+
+**Microsoft Resource:**
+- List Accounts
+- Get Account Details
+
+**Licence Resource:**
+- List Account Licences
+- List Orderable Licences
+- Order Licence
+- Terminate Licence
+
+**User Resource:**
+- List Users
+- Get User Details
+- Create User
+- Update User
+- Delete User
+- Assign Licence to User
+- Unassign Licence from User
+- Reset User Password
+- Get User Licences
+
+**Invoice Resource:**
+- List Invoices
+- Get Invoice Details
+
+### Virtualization & Enterprise
+
+#### Ikoula VMware API
+**Developed by Ascenzia**
+
+VMware virtualization platform management with operations:
+- **List Accounts**: Get all VMware service accounts
+- **Get Account Details**: Retrieve detailed VMware account information
+
+#### Ikoula Business API
+**Developed by Ascenzia**
+
+Comprehensive business process management with operations:
+- **List Accounts**: Get all business service accounts
+- **Get Account Details**: Retrieve detailed business account information
+- **List Orderable Services**: Browse available business services
+- **Order Service**: Place new service orders
+- **List Payment Methods**: Get available payment options
+- **Get Invoice Details**: Retrieve specific invoice information
+- **List Invoices**: Get all invoices
+- **List Terminable Services**: Get services eligible for termination
+- **Terminate Service**: Cancel existing services
+
+#### Ikoula Zimbra API
+**Developed by Ascenzia**
+
+Zimbra email and collaboration platform management:
+- **List Accounts**: Get all Zimbra service accounts
+- **Get Account Details**: Retrieve detailed Zimbra account information
+
+#### Ikoula HEB API
+**Developed by Ascenzia**
+
+HEB (Hébergement) web hosting services management:
+- **List Accounts**: Get all HEB service accounts
+- **Get Account Details**: Retrieve detailed HEB account information
+
+#### Ikoula Plesk Managed API
+**Developed by Ascenzia**
+
+Plesk managed hosting platform operations:
+- **List Accounts**: Get all Plesk managed service accounts
+- **Get Account Details**: Retrieve detailed Plesk account information
+
+### Domain & Certificate Management
+
+#### Ikoula NDD API
+**Developed by Ascenzia**
+
+Domain name and DNS management services:
+- **List Accounts**: Get all domain service accounts
+- **Get Account Details**: Retrieve detailed domain account information
+- **Add DNS Registration**: Add DNS registration for Certbot SSL automation
+- **Delete DNS Registration**: Remove DNS registration for Certbot
+
+#### Ikoula SSL API
+**Developed by Ascenzia**
+
+SSL certificate services management:
+- **List Subscriptions**: Get all SSL certificate subscriptions
+- **Get Subscription Details**: Retrieve detailed SSL subscription information
+
+## Features
+
+- **Secure Authentication**: RSA-encrypted password transmission
+- **Flexible Response Formats**: Support for both JSON and XML responses
+- **Error Handling**: Comprehensive error handling with continue-on-fail options
+- **Type Safety**: Full TypeScript implementation with proper type definitions
+- **Consistent API**: Unified interface across all Ikoula services
+
+## Usage Examples
+
+### Basic Account Listing
+
+```json
+{
+  "nodes": [
+    {
+      "name": "List VPS Accounts",
+      "type": "n8n-nodes-ikoula.ikoulaVpsApi",
+      "parameters": {
+        "resource": "vps",
+        "operation": "listAccounts",
+        "format": "json"
+      },
+      "credentials": {
+        "ikoulaApi": "your-ikoula-credentials"
+      }
+    }
+  ]
+}
+```
+
+### SSL Certificate Management
+
+```json
+{
+  "nodes": [
+    {
+      "name": "Get SSL Details",
+      "type": "n8n-nodes-ikoula.ikoulaSslApi",
+      "parameters": {
+        "resource": "ssl",
+        "operation": "getSubscriptionDetails",
+        "subscrId": 12345,
+        "format": "json"
+      },
+      "credentials": {
+        "ikoulaApi": "your-ikoula-credentials"
+      }
+    }
+  ]
+}
+```
+
+### Domain DNS Management
+
+```json
+{
+  "nodes": [
+    {
+      "name": "Add Certbot DNS",
+      "type": "n8n-nodes-ikoula.ikoulaNddApi",
+      "parameters": {
+        "resource": "ndd",
+        "operation": "addDnsRegistration",
+        "certbotDomain": "example.com",
+        "certbotValidation": "validation-string",
+        "format": "json"
+      },
+      "credentials": {
+        "ikoulaApi": "your-ikoula-credentials"
+      }
+    }
+  ]
+}
+```
+
+## Requirements
+
+- n8n version 1.112.0 or higher
+- Node.js 20.15 or higher
+- Valid Ikoula API credentials
+- Ikoula RSA public key file (`Ikoula.API.RSAKeyPub.pem`)
+
+## Support
+
+For support and documentation regarding the Ikoula API, please refer to the official Ikoula API documentation or contact Ikoula support.
+
+## Development
+
+This package is **developed by Ascenzia** and provides comprehensive integration with the Ikoula ecosystem for n8n automation workflows.
+
+### Building from Source
+
+```bash
+npm install
+npm run build
+```
+
+### Linting
+
+```bash
+npm run lint
+npm run lintfix
+```
 
 ## License
 
-[MIT](https://github.com/n8n-io/n8n-nodes-starter/blob/master/LICENSE.md)
+MIT
+
+---
+
+**Developed by Ascenzia** - Professional n8n node development for enterprise automation solutions.
