@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-ikoula",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "n8n node for Ikoula API integration",
   "keywords": [
     "n8n-community-node-package"
@@ -29,7 +29,8 @@
   },
   "files": [
     "dist",
-    "index.js"
+    "index.js",
+    "Ikoula.API.RSAKeyPub.pem"
   ],
   "n8n": {
     "n8nNodesApiVersion": 1,
@@ -63,6 +64,9 @@
     "gulp": "^5.0.0",
     "prettier": "^3.5.3",
     "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "n8n-workflow": "^1.0.0"
   },
   "peerDependencies": {
     "n8n-workflow": "*"

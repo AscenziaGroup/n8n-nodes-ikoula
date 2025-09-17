@@ -221,7 +221,7 @@ export class IkoulaApiPlatform implements INodeType {
 		const crypto = await import('crypto');
 
 		// Get public key for encryption
-		const publicKeyPath = path.join(process.cwd(), 'Ikoula.API.RSAKeyPub.pem');
+		const publicKeyPath = path.join(__dirname, '../../../Ikoula.API.RSAKeyPub.pem');
 		let publicKey: string;
 
 		try {
