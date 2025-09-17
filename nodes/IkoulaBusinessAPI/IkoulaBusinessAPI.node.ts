@@ -17,7 +17,7 @@ export class IkoulaBusinessApi implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Interact with Ikoula Business API for business operations management',
+		description: 'Interact with Ikoula Business API for business operations management. Developed by Ascenzia - www.ascenzia.fr',
 		defaults: {
 			name: 'Ikoula Business API',
 		},

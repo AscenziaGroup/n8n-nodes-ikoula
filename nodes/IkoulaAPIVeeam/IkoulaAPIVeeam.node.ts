@@ -17,7 +17,7 @@ export class IkoulaApiVeeam implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Interact with Ikoula Veeam API for backup management',
+		description: 'Interact with Ikoula Veeam API for backup management. Developed by Ascenzia - www.ascenzia.fr',
 		defaults: {
 			name: 'Ikoula API Veeam',
 		},

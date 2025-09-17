@@ -17,7 +17,7 @@ export class IkoulaSslApi implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Interact with Ikoula SSL API for SSL certificate services management',
+		description: 'Interact with Ikoula SSL API for SSL certificate services management. Developed by Ascenzia - www.ascenzia.fr',
 		defaults: {
 			name: 'Ikoula SSL API',
 		},

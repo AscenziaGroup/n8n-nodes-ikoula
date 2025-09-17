@@ -17,7 +17,7 @@ export class IkoulaNddApi implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Interact with Ikoula NDD API for domain name services and DNS management',
+		description: 'Interact with Ikoula NDD API for domain name services and DNS management. Developed by Ascenzia - www.ascenzia.fr',
 		defaults: {
 			name: 'Ikoula NDD API',
 		},

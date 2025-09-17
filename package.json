@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-ikoula",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "n8n node for Ikoula API integration",
   "keywords": [
     "n8n-community-node-package"
@@ -37,7 +37,6 @@
       "dist/credentials/IkoulaApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/IkoulaTestApi/IkoulaTestApi.node.js",
       "dist/nodes/IkoulaApics/IkoulaApics.node.js",
       "dist/nodes/IkoulaVpsapi/IkoulaVpsapi.node.js",
       "dist/nodes/IkoulaApiDedicatedServer/IkoulaApiDedicatedServer.node.js",

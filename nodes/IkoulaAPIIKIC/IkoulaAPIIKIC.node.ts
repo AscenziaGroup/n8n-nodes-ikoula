@@ -17,7 +17,7 @@ export class IkoulaApiikic implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Interact with Ikoula IKIC API for account management',
+		description: 'Interact with Ikoula IKIC API for account management. Developed by Ascenzia - www.ascenzia.fr',
 		defaults: {
 			name: 'Ikoula API IKIC',
 		},

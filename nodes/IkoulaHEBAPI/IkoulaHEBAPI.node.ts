@@ -17,7 +17,7 @@ export class IkoulaHebApi implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Interact with Ikoula HEB API for web hosting services management',
+		description: 'Interact with Ikoula HEB API for web hosting services management. Developed by Ascenzia - www.ascenzia.fr',
 		defaults: {
 			name: 'Ikoula HEB API',
 		},

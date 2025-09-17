@@ -17,7 +17,7 @@ export class IkoulaApiPlatform implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Interact with Ikoula Platform API for platform management',
+		description: 'Interact with Ikoula Platform API for platform management. Developed by Ascenzia - www.ascenzia.fr',
 		defaults: {
 			name: 'Ikoula API Platform',
 		},

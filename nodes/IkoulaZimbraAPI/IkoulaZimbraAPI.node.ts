@@ -17,7 +17,7 @@ export class IkoulaZimbraApi implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Interact with Ikoula Zimbra API for Zimbra email services management',
+		description: 'Interact with Ikoula Zimbra API for Zimbra email services management. Developed by Ascenzia - www.ascenzia.fr',
 		defaults: {
 			name: 'Ikoula Zimbra API',
 		},

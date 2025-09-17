@@ -17,7 +17,7 @@ export class IkoulaApiMicrosoft implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Interact with Ikoula Microsoft API for Microsoft 365 account management',
+		description: 'Interact with Ikoula Microsoft API for Microsoft 365 account management. Developed by Ascenzia - www.ascenzia.fr',
 		defaults: {
 			name: 'Ikoula API Microsoft',
 		},

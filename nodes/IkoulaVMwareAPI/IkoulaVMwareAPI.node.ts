@@ -17,7 +17,7 @@ export class IkoulaVmwareApi implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Interact with Ikoula VMware API for VMware services management',
+		description: 'Interact with Ikoula VMware API for VMware services management. Developed by Ascenzia - www.ascenzia.fr',
 		defaults: {
 			name: 'Ikoula VMware API',
 		},

@@ -17,7 +17,7 @@ export class IkoulaApiDedicatedServer implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["resource"] + ": " + $parameter["operation"]}}',
-		description: 'Interact with Ikoula Dedicated Server API',
+		description: 'Interact with Ikoula Dedicated Server API. Developed by Ascenzia - www.ascenzia.fr',
 		defaults: {
 			name: 'Ikoula API Dedicated Server',
 		},

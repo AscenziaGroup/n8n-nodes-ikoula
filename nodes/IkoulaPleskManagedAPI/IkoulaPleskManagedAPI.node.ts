@@ -17,7 +17,7 @@ export class IkoulaPleskManagedApi implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Interact with Ikoula Plesk Managed API for managed Plesk hosting services',
+		description: 'Interact with Ikoula Plesk Managed API for managed Plesk hosting services. Developed by Ascenzia - www.ascenzia.fr',
 		defaults: {
 			name: 'Ikoula Plesk Managed API',
 		},

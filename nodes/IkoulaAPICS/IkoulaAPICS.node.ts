@@ -17,7 +17,7 @@ export class IkoulaApics implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Interact with Ikoula CloudStack API for billing and consumption',
+		description: 'Interact with Ikoula CloudStack API for billing and consumption. Developed by Ascenzia - www.ascenzia.fr',
 		defaults: {
 			name: 'Ikoula API CS',
 		},

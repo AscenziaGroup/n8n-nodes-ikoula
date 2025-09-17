@@ -17,7 +17,7 @@ export class IkoulaVpsapi implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["resource"] + ": " + $parameter["operation"]}}',
-		description: 'Interact with Ikoula VPS API',
+		description: 'Interact with Ikoula VPS API. Developed by Ascenzia - www.ascenzia.fr',
 		defaults: {
 			name: 'Ikoula VPS API',
 		},

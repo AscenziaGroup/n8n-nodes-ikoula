@@ -17,7 +17,7 @@ export class IkoulaApiAcronis implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Interact with Ikoula Acronis API for backup services management',
+		description: 'Interact with Ikoula Acronis API for backup services management. Developed by Ascenzia - www.ascenzia.fr',
 		defaults: {
 			name: 'Ikoula API Acronis',
 		},
